@@ -1,0 +1,766 @@
+Valid FLT is found, ver 0, Jun 14 2021
+#####Using 4Byte access control
+Boot reached stage 13
+Boot reached stage 12
+Valid CRC found in flash - restoring env...
+Boot reached stage 11
+hw_config_id 65535: 'U84AXPx_VB'
+UART1 enabled: GPIO_PIN1 (input) Rx, GPIO_PIN9 (output) Tx
+Cold boot
+Reset status: 0x00000001
+
+Info: data uncached: addr=0xc0000000 size=1024MB
+Info: text at 0xa8000000, stack at 0xa802f6e8(8192), heap at 0xa8031708(262144), uboot size 194280
+Info: i-cache is enabled
+Info: d-cache is enabled
+Info: CPU freq is 640000000, dev freq is 125000000
+
+Info: Quantenna U-Boot version:v-undef
+Info: build date 'Jun 14 2021', time '13:32:21'
+
+SPI flash info:
+        name             : mx25u51245g
+        jedec_id         : 0xc2253a
+        sector size      : 65536
+        number of sector : 1024
+        frequency        : 40000000
+        flags            : 0x2
+        lock             :
+ddr init: 32bit, 800Mhz
+ddr init done: 1367uS
+BDA at 0x80002000
+In:    serial
+Out:   serial
+Err:   serial
+Boot reached stage 64
+rtl8363sc_init...
+disable all RTL eth ports
+rtl8363sc init completed
+Boot reached stage 65
+QTN-EMAC0
+
+main_loop: spi_flash read 0x20000 0xa8031634 0x4
+Read: flash=0x20000 mem=0xa8031634 size=4 ret_size=4
+Starting Slave U-Boot from branch 1
+main_loop: spi_flash read 0x40004 0xa803163c 0x4
+Read: flash=0x40004 mem=0xa803163c size=4 ret_size=4
+main_loop: spi_flash read 0x40008 0xa8031638 0x4
+Read: flash=0x40008 mem=0xa8031638 size=4 ret_size=4
+main_loop: spi_flash read 0x4000c 0x83000000 0x1fff4
+Read: flash=0x4000c mem=0x83000000 size=131060 ret_size=131060
+Slave CRC is 0x6c810aa4
+Slave size is 86513
+Calculated slave CRC is 0x6c810aa4
+main_loop: go 0x80040000
+## Starting application at 0x80040000 ...
+Valid FLT is found, ver 0, Jun 14 2021
+#####Using 4Byte access control
+Boot reached stage 13
+Boot reached stage 12
+Valid CRC found in flash - restoring env...
+Boot reached stage 11
+hw_config_id 65535: 'U84AXPx_VB'
+UART1 enabled: GPIO_PIN1 (input) Rx, GPIO_PIN9 (output) Tx
+Cold boot
+Reset status: 0x00000001
+
+Info: data uncached: addr=0xc0000000 size=1024MB
+Info: text at 0xa8000000, stack at 0xa802cf34(8192), heap at 0xa802ef54(262144), uboot size 184116
+Info: i-cache is enabled
+Info: d-cache is enabled
+Info: CPU freq is 640000000, dev freq is 125000000
+
+Info: Quantenna U-Boot version:v38.8.0.16+
+Info: build date 'Mar 18 2022', time '15:07:31'
+
+SPI flash info:
+        name             : mx25u51245g
+        jedec_id         : 0xc2253a
+        sector size      : 65536
+        number of sector : 1024
+        frequency        : 66000000
+        flags            : 0x2
+        lock             :
+BDA at 0x80002000
+In:    serial
+Out:   serial
+Err:   serial
+Boot reached stage 64
+rtl8363sc_init...
+disable all RTL eth ports
+rtl8363sc init completed
+Boot reached stage 65
+QTN-EMAC0
++++ starting time measurement
++++ reset button not pressed
+## Custom envs:
+   ap_ssid = TN-QV1864
+   ethaddr = 00:0F:15:59:21:4D
+   ethaddr_num = 12
+   model_name = i3560
+   model_number = i3560-81
+   pcb_sn = 860Y2223002353
+   production_mode = 0
+   serial_number = 3560810024458
+
+
+get_qtnboot_envvars: vars: safety_image_addr 0x100000 safety_image_size 0x1c80000 live_image_addr 0x1d80000 live_image_size 0x1c80000 config_image_addr 0x3f00000 config_image_size 0x100000 fon_image_addr 0x3a00000 fon_image_size 0x500000
+Choosing Linux image...
+do_qtnboot: spi_flash read 0x20000 0xa802e198 0x4
+Read: flash=0x20000 mem=0xa802e198 size=4 ret_size=4
+Starting Linux from branch 1
+do_qtnboot: spi_flash read 0x01d80000 0x83000000 0x0000000c
+Read: flash=0x1d80000 mem=0x83000000 size=12 ret_size=12
+KERNEL+FS CRC = 0xeff79b78
+KERNEL SIZE   = 0x294e43
+FS SIZE       = 0xbab000
+do_qtnboot: spi_flash read 0x01d8000c 0x83000000 0x00e3fe43
+Read: flash=0x1d8000c mem=0x83000000 size=14941763 ret_size=14941763
+Calculated KFS CRC is 0xeff79b78
+do_qtnboot: setenv mtdparts ${mtdparts},12234752@33640015(rfs1)
+do_qtnboot: setenv bootargs  ${bootargs} mtdparts=${mtdparts} root=/dev/mtdblock9 rootfstype=squashfs rw
+do_qtnboot: bootm 0x83000000
+Boot reached stage 1
+## Booting kernel from Legacy Image at 83000000 ...
+Boot reached stage 2
+Boot reached stage 3
+   Image Name:   pearl-linux
+   Image Type:   arc Linux Kernel Image (lzma compressed)
+   Data Size:    2698819 Bytes =  2.6 MB
+   Load Address: 88e82000
+   Entry Point:  88e84000
+   Qtn flags:    00000001
+   Verifying Checksum ... OK
+Boot reached stage 4
+Boot reached stage 5
+Boot reached stage 6
+Boot reached stage 14
+   Uncompressing Kernel Image ... OK
+Boot reached stage 7
+Boot reached stage 8
+## Transferring control to Linux (at address 88e84000) bootargs=console=ttyS0,115200n8 earlyprintk=1 hw_config_id=65535 init=/init mtdparts=spi_flash:124k@4k(uboot),128k(uboot1),128k(uboot2),128k(uboot_env),512k(cal_dat),29184k(linux_safety),29184k(linux_live),5120k(fon),1024k(data),12234752@33640015(rfs1) root=/dev/mtdblock9 rootfstype=squashfs rw...
+[    0.000000] Linux version 4.19.35 (compile@b24e03dea408) (gcc version 8.2.1 20180814 (ARCompact ISA Linux uClibc toolchain built on 20190826)) #1 Fri Mar 18 14:27:51 UTC 2022
+[    0.000000] OF: fdt: Machine model: qtn,qsr5gax
+[    0.000000] earlycon: ns16550a0 at MMIO32 0xf0000000 (options '')
+[    0.000000] bootconsole [ns16550a0] enabled
+[    0.000000]
+[    0.000000] IDENTITY : ARCVER [0x35] ARCNUM [0x0] CHIPID [0x270f]
+[    0.000000] processor [0]    : Unknown R4.11 (ARCompact ISA)
+[    0.000000] Timers           : Timer0 Timer1
+[    0.000000] ISA Extn : atomic
+[    0.000000]          : mpy norm barrel-shift swap minmax crc swape
+[    0.000000] BPU              : partial match, cache:256, Predict Table:256
+[    0.000000] MMU [v3] : 8k PAGE, JTLB 256 (128x2), uDTLB 8, uITLB 4
+[    0.000000] I-Cache          : 16K, 2way/set, 32B Line, VIPT
+[    0.000000] D-Cache          : 16K, 4way/set, 32B Line, VIPT
+[    0.000000] Peripherals      : 0xc0000000
+[    0.000000] Vector Table     : 0x88e82000
+[    0.000000] DEBUG            : ActionPoint smaRT
+[    0.000000] OS ABI [v4]      : 64-bit data any register aligned
+[    0.000000] Board id: 65535
+[    0.000000] Memory @80000000 [256M]
+[    0.000000] Reserve @8F222000 [14540800] as MuC ddr heap
+[    0.000000] On node 0 totalpages: 30993
+[    0.000000]   Normal zone: 137 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 30993 pages, LIFO batch:7
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 30856
+[    0.000000] Kernel command line: earlycon debug print-fatal-signals=1 console=ttyS0,115200n8 earlyprintk=1 hw_config_id=65535 init=/init mtdparts=spi_flash:124k@4k(uboot),128k(uboot1),128k(uboot2),128k(uboot_env),512k(cal_dat),29184k(linux_safety),29184k(linux_live),5120k(fon),1024k(data),12234752@33640015(rfs1) root=/dev/mtdblock9 rootfstype=squashfs rw
+[    0.000000] Dentry cache hash table entries: 32768 (order: 4, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 3, 65536 bytes)
+[    0.000000] Memory: 93536K/247944K available (4084K kernel code, 136K rwdata, 1352K rodata, 88K init, 340K bss, 154408K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=128, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 128
+[    0.000027] sched_clock: 32 bits at 640MHz, resolution 1ns, wraps every 3355443199ns
+[    0.007837] clocksource: ARC Timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 2986344447 ns
+[    0.017467] Calibrating delay loop... 1273.03 BogoMIPS (lpj=3182592)
+[    0.150017] pid_max: default: 32768 minimum: 301
+[    0.150379] Mount-cache hash table entries: 2048 (order: 0, 8192 bytes)
+[    0.150444] Mountpoint-cache hash table entries: 2048 (order: 0, 8192 bytes)
+[    0.160573] devtmpfs: initialized
+[    0.162639] random: get_random_u32 called from bucket_table_alloc.isra.6+0x70/0x1d4 with crng_init=0
+[    0.163341] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 9556302231375000 ns
+[    0.163388] futex hash table entries: 256 (order: -2, 3072 bytes)
+[    0.164089] NET: Registered protocol family 16
+[    0.166090] HEAP in SRAM a8023b40<->a8030000
+[    0.185281] clocksource: Switched to clocksource ARC Timer1
+[    0.193165] NET: Registered protocol family 2
+[    0.199041] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 8192 bytes)
+[    0.199153] TCP established hash table entries: 2048 (order: 0, 8192 bytes)
+[    0.199222] TCP bind hash table entries: 2048 (order: 0, 8192 bytes)
+[    0.199286] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.199795] UDP hash table entries: 512 (order: 0, 8192 bytes)
+[    0.199879] UDP-Lite hash table entries: 512 (order: 0, 8192 bytes)
+[    0.200681] NET: Registered protocol family 1
+[    0.210360] workingset: timestamp_bits=30 max_order=14 bucket_order=0
+[    0.220644] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.220674] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.236603] fuse init (API version 7.27)
+[    0.316040] io scheduler noop registered (default)
+[    0.496581] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    0.505191] console [ttyS0] disabled
+[    0.505476] serial8250.0: ttyS0 at MMIO 0xf0000000 (irq = 48, base_baud = 7812500) is a 16550A
+[    0.505535] console [ttyS0] enabled
+[    0.505550] bootconsole [ns16550a0] disabled
+[    0.506470] serial8250.0: ttyS1 at MMIO 0xf5000000 (irq = 49, base_baud = 7812500) is a 16550A
+[    0.508442] libphy: Fixed MDIO Bus: probed
+[    0.508472] ruby_health loading
+[    0.511582] spi_flash: Force not to support Protect Mode
+[    0.511655] 10 cmdlinepart partitions found on MTD device spi_flash
+[    0.511671] Creating 10 MTD partitions on "spi_flash":
+[    0.511717] 0x000000001000-0x000000020000 : "uboot"
+[    0.521689] 0x000000020000-0x000000040000 : "uboot1"
+[    0.523260] 0x000000040000-0x000000060000 : "uboot2"
+[    0.524800] 0x000000060000-0x000000080000 : "uboot_env"
+[    0.527388] 0x000000080000-0x000000100000 : "cal_dat"
+[    0.536628] 0x000000100000-0x000001d80000 : "linux_safety"
+[    0.538169] 0x000001d80000-0x000003a00000 : "linux_live"
+[    0.539694] 0x000003a00000-0x000003f00000 : "fon"
+[    0.542330] 0x000003f00000-0x000004000000 : "data"
+[    0.543914] improper partition size=bab000, offset=2014e4f
+[    0.543958] 0x000002014e4f-0x000002bbfe4f : "rfs1"
+[    0.543973] mtd: partition "rfs1" doesn't start on an erase/write block boundary -- force read-only
+[    0.550676] spi_flash: SPI flash driver initialized successfully!
+[    1.262608] gre: GRE over IPv4 demultiplexor driver
+[    1.262638] ip_gre: GRE over IPv4 tunneling driver
+[    1.268768] NET: Registered protocol family 10
+[    1.388822] Segment Routing with IPv6
+[    1.392114] ip6_gre: GRE over IPv6 tunneling driver
+[    1.394538] NET: Registered protocol family 17
+[    1.394624] NET: Registered protocol family 15
+[    1.410407] openvswitch: Open vSwitch switching datapath
+[    1.411051] mpls_gso: MPLS GSO support
+[    1.424860] VFS: Mounted root (squashfs filesystem) readonly on device 31:9.
+[    1.424967] Freeing unused kernel memory: 88K
+[    1.424985] This architecture does not have kernel memory protection.
+[    1.424997] Run /init as init process
+[    1.460323] random: fast init done
+[    2.384338] random: init: uninitialized urandom read (4 bytes read)
+Starting from initramfs ...
+[    2.988440] random: busybox: uninitialized urandom read (4 bytes read)
+[    3.051853] random: mount: uninitialized urandom read (4 bytes read)
+file path cache create: Read-only file system
+[    4.434516] bootcfg: loading out-of-tree module taints kernel.
+[    4.436566] load_module: bootcfg at 0x8eca8000, size 0x7fa8
+[    5.023954] load_module: zram at 0x8e984000, size 0x36e6
+[    5.030754] zram: Added device: zram0
+[    5.038182] zram0: detected capacity change from 0 to 41943040
+Setting up swapspace version 1, size = 41934848 bytes
+UUID=5e14f9a5-6cbf-40d0-b7c3-a9fc8062d29e
+[    5.196159] Adding 40952k swap on /dev/zram0.  Priority:-2 extents:1 across:40952k SS
+/tmp/config mounted
+Creating /etc/ipaddr
+[    6.653997] ubi0: default fastmap pool size: 8
+[    6.654037] ubi0: default fastmap WL pool size: 4
+[    6.654053] ubi0: attaching mtd7
+[    6.686147] ubi0: scanning is finished
+[    6.760438] ubi0: attached mtd7 (name "fon", size 5 MiB)
+[    6.760476] ubUBI device numbeir 0, total 80 LEBs (5232640 byte0s, 4.9 MiB), available 8 LEBs (5:23264 bytes, 511.0 KiB), LEB siz e 65408 bytes (6P3.8 KiB)
+EB size: 65536 bytes (64 KiB), LEB size: 65408 bytes
+[    6.760491] ubi0: min./max. I/O unit sizes: 1/1, sub-page size 1
+[    6.760505] ubi0: VID header offset: 64 (aligned 64), data offset: 128
+[    6.760517] ubi0: good PEBs: 80, bad PEBs: 0, corrupted PEBs: 0
+[    6.760531] ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+[    6.760547] ubi0: max/mean erase counter: 4/1, WL threshold: 4096, image sequence number: 1994843448
+[    6.760561] ubi0: available PEBs: 8, total reserved PEBs: 72, PEBs reserved for bad PEB handling: 0
+[    6.767056] ubi0: background thread "ubi_bgt0d" started, PID 126
+[    7.060029] UBIFS (ubi0:1): background thread "ubifs_bgt0_1" started, PID 137
+[    7.110953] UBIFS (ubi0:1): recovery needed
+[/mnt/customer mo unted   7.1470
+39] UBIFS (ubi0:1): recovery completed
+[    7.147083] UBIFS (ubi0:1): UBIFS: mounted UBI device 0, volume 1, name "customer1"
+[    7.147104] UBIFS (ubi0:1): LEB size: 65408 bytes (63 KiB), min./max. I/O unit sizes: 8 bytes/8 bytes
+[    7.147125] UBIFS (ubi0:1): FS size: 1504384 bytes (1 MiB, 23 LEBs), journal size 588673 bytes (0 MiB, 8 LEBs)
+[    7.147140] UBIFS (ubi0:1): reserved for root: 0 bytes (0 KiB)
+[    7.147160] UBIFS (ubi0:1): media format: w4/r0 (latest is w5/r0), UUID BF50D27F-A8E4-4FF7-B46A-8AF33A21B1CF, small LPT model
+Starting icotera_watchdog kernel module...
+[    7.536628] ict_watchdog: module license 'unspecified' taints kernel.
+[    7.536671] Disabling lock debugging due to kernel taint
+[    7.537329] load_module: ict_watchdog at 0x8e822000, size 0xcd9
+[    7.537383] Icotera watchdog enabled!
+sysctl: /etc/sysctl.conf: No such file or directory
+mounting config...
+cmdloop: starting ubusd at  00:00:07 up 0 min,  load average: 0.08, 0.01, 0.00
+[    8.985747] potentially unexpected fataIllegal instructlion signal 4
+.
+[    8.985797] Path: /bin/securefs
+[    8.985823] CPU: 0 PID: 157 Comm: securefs Tainted: P           O      4.19.35 #1
+[    8.985837]
+[    8.985837] [ECR   ]: 0x00240000 => Check Programmer's Manual
+[    8.985867] [EFA   ]: 0x1d0fdf20
+[    8.985867] [BLINK ]: 0x1d0fdebc
+[    8.985867] [ERET  ]: 0x1d0fdf20
+[    8.985894]     @off 0xeff20 in [/lib/libstdc++.so.6.0.25]
+[    8.985894]     VMA: 0x1d00e000 to 0x1d14c000
+[    8.985909] [STAT32]: 0x00000286 : U         E2 E1
+[    8.985927] BTA: 0x1d09a33d   SP: 0x56b51d70  FP: 0x00000000
+[    8.985939] LPS: 0x1d004f04  LPE: 0x1d004f0c LPC: 0x00000000
+[    8.985984] r00: 0x1d151338  r01: 0x1d14e15c r02: 0x1d151104
+[    8.985984] r03: 0x00000000  r04: 0x1d153e90 r05: 0x00000006
+[    8.985984] r06: 0x1d153e90  r07: 0x56b51d48 r08: 0x1d10b330
+[    8.985984] r09: 0x1d153aa0  r10: 0x1d004e60 r11: 0x1d00a174
+[    8.985984] r12: 0x1d087c0c  r13: 0x1d153648 r14: 0x1d1535dc
+[    8.985984] r15: 0x1d153230  r16: 0x1d1535dc r17: 0x1d153280
+[    8.985984] r18: 0x1d15499c  r19: 0x000c5da4 r20: 0x1d150bb0
+[    8.985984] r21: 0x1d1d2080  r22: 0xffffffff r23: 0x1d151070
+[    8.985984] r24: 0x1d1d20c4  r25: 0x1d00ae28
+[    8.985984]
+[    8.985984]
+config mounted!
+00:00:10 version set to 3560-0.2.0
+shm starting...
+step 1
+step 2
+step 3
+dynamic_struct addr=[114008], size=[389731]
+names addr=[503740], size=[161780]
+consts addr=[113896], size=[111]
+validators addr=[82040], size=[9725]
+common_validator_array addr=[91772], size=[22120]
+step 4
+start
+init memory block
+init memory data
+SHM custom data init: initializing 321640 bytes...
+SHM custom data init: allocated 321640 bytes
+SHM custom data init: initialized
+init done
+step 5
+step 6
+tmp/boot.db
+SHM init succesful
+Command execution success
+shm started!
+ICG starting...
+00:00:14 INFO  main.c:54: ICG successfully generated configuration files
+ICG started!
+Initializing random number generator...
+Init succesful
+Command execution success
+Random number generator initialized!
+Starting network...
+Using config directory /mnt/jffs2
+[   15.578965] load_module: rtl8367c at 0x8ee80000, size 0x4b2bb
+[   15.631208] load_module: emaclib at 0x8ee30000, size 0x9dbc
+[   15.702208] load_module: sid at 0x8ee00000, size 0xd728
+[   15.768146] load_module: dpi at 0x8ee20000, size 0x4b13
+[   15.801736] load_module: rxp at 0x8ede0000, size 0x423d
+[   15.870145] load_module: switch_vlan at 0x8edf8000, size 0x4fef
+[   15.915712] load_module: qtn_debug at 0x8eb89800, size 0x737
+[   15.964565] load_module: switch_tqe at 0x8ee58000, size 0x662c
+[   16.217638] load_module: fwt_if at 0x8ee44000, size 0x3f2a
+[   16.282866] load_module: fwt_ctrl at 0x8ef80000, size 0x4c1c4
+[   16.337083] load_module: switch_eth at 0x8ee10000, size 0x8d64
+[   16.337196] Random stuff 3B
+[   16.374268] rtl8367c_init switch init completed (0)
+[   16.581072] find txrx_eq0 8
+[   16.581122] find txrx_eq1 8
+[   16.742954] load_module: 8021q at 0x8c008000, size 0x4807
+[   16.742998] 8021q: 802.1Q VLAN Support v1.8
+[   16.814481] eth1_0: renamed from eth1_emac0
+emac0 is eth1_0, emac1 is unused
+sed: can't create temp file '/etc/network/interfacesXdTcPw': Read-only file system
+Using IP address 192.168.1.200
+Netmask is not set
+read eth_addr from mac_addr, eth_addr is
+[   17.823047] find txrx_eq0 8
+[   17.823106] find txrx_eq1 8
+[   17.823141] emac_lib eth1_0: force link (2500/Full)
+[   17.900508] br0: port 1(eth1_0) entered blocking state
+[   17.900760] br0: port 1(eth1_0) entered disabled state
+[   17.901565] device eth1_0 entered promiscuous mode
+Setting up bridge interface br0...
+[   18.099118] [br0] Enabling SSDP flooding
+[   18.137475] br0: port 1(eth1_0) entered blocking state
+[   18.137515] br0: port 1(eth1_0) entered forwarding state
+[   18.138870] IPv6: ADDRCONF(NETDEV_UP): br0: link is not ready
+/sbin/ifup -a
+[   18.878495] FWT user command:debug
+Starting inetd...
+[   18.931850] IPv6: ADDRCONF(NETDEV_CHANGE): br0: link becomes ready
+[   19.417306] load_module: hw_info_procs at 0x8ec00000, size 0x10af
+Starting wireless...
+start-prod: started
+Loading modules
+[   20.640753] load_module: i2cbus at 0x8ee4c000, size 0x3b52
+[   20.846315] load_module: radar at 0x8c100000, size 0xd827d
+[   21.559957] load_module: wlan at 0x8c400000, size 0x11cb6d
+[   21.664494] load_module: auc_fw at 0x8c020000, size 0x4bb
+[   22.756960] load_module: qdrv at 0x8c600000, size 0x12c349
+[   22.757015] find dev_mode 8
+[   22.757971] QDRV: No external temperature sensor
+[   22.835179] load_module: netdbg at 0x8c080000, size 0x65620
+[   22.899694] load_module: wlan_xauth at 0x8c020800, size 0x48e
+[   22.963067] load_module: wlan_ccmp at 0x8c2f8000, size 0x308e
+[   23.012057] load_module: wlan_tkip at 0x8c2fc000, size 0x290e
+[   23.061224] load_module: wlan_wep at 0x8ec02000, size 0x170e
+[   23.109733] load_module: wlan_ccmp_256 at 0x8c002000, size 0x90e
+[   23.158634] load_module: wlan_gcmp at 0x8c000000, size 0x90e
+[   23.206867] load_module: wlan_gcmp_256 at 0x8c003000, size 0x90e
+[   23.256076] load_module: wlan_acl at 0x8ec04000, size 0x140e
+Loading firmware mucfw qtn_driver.qtn_ruby.0.bin
+Loading firmware aucfw0 auc_driver.0.bin
+Loading firmware aucfw1 auc_driver.1.bin
+Loading firmware aucfw2 auc_driver.2.bin
+Loading firmware mucfw qtn_driver.qtn_ruby.0.bin
+Loading firmware dspfw0 rdsp_driver.0.bin
+Loading firmware dspfw1 rdsp_driver.1.bin
+Loading firmware dspfw2 rdsp_driver.2.bin
+[wifi0_0] Starting in repeater mode
+[wifi2_0] Starting in ap mode
+Starting pktlogger daemon
+net.ipv6.conf.all.disable_ipv6 = 1
+Configuring WPS physical push button
+Waiting for Wireless Events from interfaces...
+QCS API error 1009: Operation only available in bringup mode
+QCS API error 1009: Operation only available in bringup mode
+QCS API error 1009: Operation only available in bringup mode
+QCS API error 1009: Operation only available in bringup mode
+Set mac0addr 00:0f:15:59:21:50
+Set mac1addr 00:26:86:ba:3b:e6
+Set mac2addr 00:0f:15:59:21:51
+[   25.538912] find power_recheck 13
+[   25.548085] find rfa_mask 8
+[   25.548138] find power_table_path 16
+[   25.548172] find rx_spur_path 12
+[   25.579998] find calstate 8
+[   25.580067] find dcdc_enable 11
+[   25.580117] QDRV: [WMAC0] max assoc 128 node range 0-160 freq range 5140-5860
+[   25.580135] QDRV: [WMAC1] max assoc 0 node range 160-192 freq range 5140-5860
+[   25.580149] QDRV: [WMAC2] max assoc 128 node range 192-352 freq range 2402-2494
+[   25.580160] find dump_crumbs 11
+[   25.580205] QDRV: hardware revision: 110
+[   25.580219] find bond_opt 8
+[   25.580248] find shortrange_scancnt 18
+[   25.580478] find min_tx_power 12
+[   25.580508] find max_tx_power 12
+[   25.580528] find post_mask 9
+[   25.580647] find no_cal 6
+[   27.871465] find calstate 8
+[   27.871720] find fan_ctrl 8
+[   27.871764] find fan_tsamp 9
+[   27.871794] find fan_tmin 8
+[   27.871823] find fan_tmid 8
+[   27.871851] find fan_tmax 8
+[   29.764202] find dm_txpower_factor 17
+[   29.764269] find dm_aci_factor 13
+[   29.764302] find dm_cci_factor 13
+[   29.764331] find dm_dfs_factor 13
+[   29.764360] find dm_beacon_factor 16
+[   29.764544] radar initialized
+[   29.875553] find dm_txpower_factor 17
+[   29.875610] find dm_aci_factor 13
+[   29.875643] find dm_cci_factor 13
+[   29.875672] find dm_dfs_factor 13
+[   29.875701] find dm_beacon_factor 16
+[   29.878657] QDRV: hardware is 5x5 5G + 4x4 2.4G QSR5G_AX_PLUS
+[   29.975438] MuC : chip_id 0x80
+[   29.975469] MuC : modem 0 RFIC8
+[   29.975480] MuC : modem 1 RFIC8
+[   29.975489] MuC : modem 2 RFIC6
+[   29.975498] MuC : calstate is 3 (prod), dcache on, BB mode is REGULAR
+[   29.975507] MuC : bb_modem 0 RFIC version 7 rev 2 pll_ver 3
+[   29.975519] MuC : bb_init: modem 0 bw_mode 20 chan 0 11b 0 11a 1 rx_ant 8(5) dcdc 0 80p80 0 rifs 1 1024qam 1
+[   29.975530] MuC : PDPC file with version 2 found.
+[   29.975539] MuC : init_cal_io_files: bb_modem=0, dciq_cal_ver=V1.20, powerdet_cal_ver=V1.20
+[   29.975550] MuC : bb_modem 1 RFIC version 7 rev 2 pll_ver 3
+[   29.975559] MuC : bb_modem 2 RFIC version 3 rev 5 pll_ver 0
+[   29.975569] MuC : bb_init: modem 2 bw_mode 20 chan 0 11b 1 11a 0 rx_ant 4(4) dcdc 0 80p80 0 rifs 1 1024qam 1
+[   29.975580] MuC : init_cal_io_files: bb_modem=2, dciq_cal_ver=V1.20, powerdet_cal_ver=V1.20
+[   29.975590] MuC : wmac 0: set dynamic sounding type
+[   29.975599] MuC : wmac 2: set dynamic sounding type
+[   29.975617] AuC0: AuC: build 605 multiply 505 swap 1 norm 2 minmax 0
+[   29.975629] AuC0: rxq desc is linear mode, 3172 used, 96 left
+[   29.975644] AuC1: AuC: build 605 multiply 505 swap 1 norm 2 minmax 0
+[   29.975662] AuC2: AuC: build 605 multiply 505 swap 1 norm 2 minmax 0
+[   29.975673] AuC2: rxq desc is linear mode, 1120 used, 0 left
+[   33.499665] QDRV: set power_selection 4
+[   33.650016] [br0] Enabling SSDP flooding
+Regulatory database /etc/qtn_regulatory_db.bin v38.5.0.90
+/scripts/start-prod: line 300: can't create /etc/region: Read-only file system
+wifi0_0: configuring interface...
+Restoring /mnt/jffs2/wpa_supplicant.conf.wifi0 from /etc/default/wpa_supplicant.conf
+Restoring /mnt/jffs2/hostapd.conf.wifi0 from /etc/default/hostapd.conf
+[   35.395941] load_module: wlan_scan_ap at 0x8c070000, size 0x3a92
+[   35.497803] load_module: wlan_scan_sta at 0x8c074000, size 0x3d8e
+[   35.581956] find bb_only 7
+[   35.581998] find no_cal 6
+[   35.582037] QDRV: Start VAP wifi0_0 mac 0 devid 3
+[   35.585508] netif_napi_add() called with weight 128 on device wifi0_0
+[   35.669882] MuC : qtn_alloc_vapnode 00:0f:15:59:21:50 0x8f250ce8 in station table on dev 3 hash 16 idx 6
+[   35.769901] MuC : MIMO unit 0 tx chains 4
+wifi0_0: Setting bw to 80
+[   36.528731] MuC : bw_sel unit 0 bw 80M phymode 11ax80
+[   36.528771] MuC : RFIC8 RC cal: saved value is 0x7
+[   36.528785] MuC : RFIC8 RC cal: result = 0x6
+[   36.528795] MuC : RFIC8 R cal: saved value is = 0x5
+[   36.528805] MuC : RFIC8 R cal: result = 0x5
+wifi0_0: BSS Transmission Management is enabled
+wifi0_0: Setting mode to 11ax80
+[   37.169864] MuC : bw_sel unit 0 bw 80M phymode 11ax80
+wifi0_0: Setting regulatory region to eu
+Jan  1 00:00:38 local_regulatory_set_regulatory_region[1086]: [wifi0_0] Using Tx power table /etc/power_tables/tx_power_QSR10G_5G_eu.txt
+
+Jan  1 00:00:38 local_set_pri_inactive_chanlist_by_bw[1086]: Clear channel 153 from inactive primary channel list
+
+Jan  1 00:00:38 local_set_pri_inactive_chanlist_by_bw[1086]: Clear channel 153 from inactive primary channel list
+
+Jan  1 00:00:38 local_set_pri_inactive_chanlist_by_bw[1086]: Clear channel 153 from inactive primary channel list
+
+Jan  1 00:00:38 local_set_pri_inactive_chanlist_by_bw[1086]: Clea[r channel 153 from inactive prim ary channel list
+
+ 38.400936] find shortrange_scancnt 18
+[   38.406113] find shortrange_scancnt 18
+[   38.406458] DFS_REGION=1
+[   38.469865] MuC : get max gain from cal_data: bb_modem = 0, radar_chain = 0, max_gain = 57
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: getparam (8BE1) 865131: Invalid argument
+
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: getparam (8BE1) 891346: Invalid argument
+
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:38 WiFi Private IOCTL[1086]: getparam (8BE1) 917560: Invalid argument
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: getparam (8BE1) 865131: Invalid argument
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: getparam (8BE1) 891346: Invalid argument
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: Interface wifi0_0 doesn't accept private ioctl...
+
+Jan  1 00:00:39 WiFi Private IOCTL[1086]: getparam (8BE1) 917560: Invalid argument
+
+Jan  1 00:00:39 local_regulatory_set_regulatory_region[1086]: Region changed from none to eu
+
+[wifi0_0] Using Tx power table /etc/power_tables/tx_power_QSR10G_5G_eu.txt
+Jan  1 00:00:39 Set Channel[1126]: channel 36, wrq.u.freq.e 0, wrq.u.freq.m 36
+
+[   40.416895] br0: port 2(wifi0_0) entered blocking state
+[   40.417141] br0: port 2(wifi0_0) entered disabled state
+[   40.418020] device wifi0_0 entered promiscuous mode
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "manufacturer=Quantenna" to ap config file for wifi0_0
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "device_name=Reference Design" to ap config file for wifi0_0
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "model_name=i3560" to ap config file for wifi0_0
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "model_number=i3560-81" to ap config file for wifi0_0
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "serial_number=3560810024458" to ap config file for wifi0_0
+Jan  1 00:00:40 QCSAPI_SEC[1161]: adding "pairing_id=Customer_ID" to ap config file for wifi0_0
+wifi0_0: Beamforming is enabled
+[   41.181120] Disabling SCS version Standard
+wifi0_0: Disabling SCS
+[   42.069898] MuC : MU on wifi0 enabled
+[   42.469868] MuC : AQM: flags 0x0 -> 0x1
+[   42.569894] MuC : AQM: flags 0x1 -> 0x9
+wifi2_0: configuring interface...
+Restoring /mnt/jffs2/hostapd.conf.wifi2 from /etc/default/hostapd.conf
+[   43.572983] find bb_only 7
+[   43.573023] find no_cal 6
+[   43.573062] QDRV: Start VAP wifi2_0 mac 2 devid 35
+[   43.669869] MuC : qtn_alloc_vapnode 00:0f:15:59:21:51 0x8f4bb188 in station table on dev 35 hash 17 idx 198
+[   43.769897] MuC : MIMO unit 2 tx chains 4
+wifi2_0: Setting bw to 40
+[   44.532492] MuC : bw_sel unit 2 bw 40M phymode 11axng40
+[   44.532532] MuC : RFIC6 RC cal: saved value is = 0x7
+[   44.532544] MuC : RFIC6 RC cal: result = 0x5
+[   44.532555] MuC : RFIC6 R cal: saved value is = 0x4
+[   44.532564] MuC : RFIC6 R cal: result = 0x5
+wifi2_0: BSS Transmission Management is enabled
+wifi2_0: Setting mode to 11axng40
+[   45.069875] MuC : bw_sel unit 2 bw 40M phymode 11axng40
+wifi2_0: Setting regulatory region to eu
+Jan  1 00:00:45 local_regulatory_set_regulatory_region[1449]: [wifi2_0] Using Tx power table /etc/power_tables/tx_power_QSR10G_2G_eu.txt
+
+Jan  1 00:00:45 local_set_pri_inactive_chanlist_by_bw[1449]: Clear channel 13 from inactive primary channel list
+
+Jan  1 00:00:45 local_set_pri_inactive_chanlist_by_bw[1449]: Clear channel 13 from inactive primary channel list
+
+Jan  1 00:00:45 802.11d Set country code[1449]: Region eu, Disable country IE support. Region name should be a country name.
+Jan  1 00:00:45 local_regulatory_set_regulatory_region[1449]: Region changed from none to eu
+
+[wifi2_0] Using Tx power table /etc/power_tables/tx_power_QSR10G_2G_eu.txt
+channel switch history record count : 1
+time=44 channel=2 reason=CONFIG
+clear records complete
+Jan  1 00:00:46 Set Channel[1496]: channel 0, wrq.u.freq.e 0, wrq.u.freq.m 0
+
+Configure max_boot_cac to -1
+[   46.769205] br0: port 3(wifi2_0) entered blocking state
+[   46.769457] br0: port 3(wifi2_0) entered disabled state
+[   46.770557] device wifi2_0 entered promiscuous mode
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "manufacturer=Quantenna" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "device_name=Reference Design" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "model_name=i3560" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "model_number=i3560-81" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "serial_number=3560810024458" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "friendly_name=UPnP Access Point" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "device_type=6-0050F204-1" to ap config file for wifi2_0
+Jan  1 00:00:46 QCSAPI_SEC[1500]: adding "wps_rf_bands=g" to ap config file for wifi2_0
+wifi2_0: Beamforming is enabled
+[   47.695939] Disabling SCS version Standard
+wifi2_0: Installing new config file
+wifi2_0: Disabling SCS
+[   48.969881] MuC : MU on wifi2 enabled
+wifi2_0: Disabling PTA
+[   49.569906] MuC : AQM: flags 0x0 -> 0x1
+[   49.669948] MuC : AQM: flags 0x1 -> 0x9
+Starting security daemon:
+wpa_supplicant  -s  -g /var/run/wpa_supplicant/wifi_wgc  -iwifi0_0 -bbr0 -Dmadwifi -c /mnt/jffs2/wpa_supplicant.conf.wifi0 > /dev/null &
+QPROCMON: Running for wpa_supplicant pid 1696
+wifi0_0: configuring interface...
+[   50.939919] find bb_only 7
+[   50.939970] find no_cal 6
+[   50.940013] QDRV: Start VAP wifi0_1 mac 0 devid 4
+[   50.980798] MuC : out of SRAM, req_size 924 shift 2
+[   50.980839] MuC : uc_alloc_netdev: Allocating dev 4 from DDR
+[   50.980854] MuC : qtn_alloc_vapnode 00:0f:15:59:21:55 0x8f253644 in station table on dev 4 hash 21 idx 8
+[   51.169896] MuC : MIMO unit 0 tx chains 4
+[   51.305487] WPS: push button GPIO pin 4
+[   51.305531] WPS: monitored using polling
+[   51.305543] WPS: active logic is low
+[   51.306472] br0: port 2(wifi0_0) entered blocking state
+[   51.306509] br0: port 2(wifi0_0) entered forwarding state
+Jan  1 00:00:52 local_regulatory_set_regulatory_region[1731]: [wifi0_1] Using Tx power table /etc/power_tables/tx_power_QSR10G_5G_eu.txt
+
+Jan  1 00:00:52 local_set_pri_inactive_chanlist_by_bw[1731]: Clear channel 153 from inactive primary channel list
+
+Jan  1 00:00:[52 local_set_pri _inactive_chanli st_by_bw[1731]:  Clear channel 1553 from inactive 2primary channel .list
+
+202190] channel 153 is removed from non-primary channel list
+Jan  1 00:00:52 local_set_pri_inactive_chanlist_by_bw[1731]: Clear channel 153 from inactive primary channel list
+
+[   52.241415] Radar on radio 0 is already configured
+Jan  1 00:00:52 802.11d Set country code[1731]: Region eu, Disable country IE support. Region name should be a country name.
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: getparam (8BE1) 865131: Invalid argument
+
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: getparam (8BE1) 891346: Invalid argument
+
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:52 WiFi Private IOCTL[1731]: getparam (8BE1) 917560: Invalid argument
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: getparam (8BE1) 865131: Invalid argument
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: getparam (8BE1) 891346: Invalid argument
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: Interface wifi0_1 doesn't accept private ioctl...
+
+Jan  1 00:00:53 WiFi Private IOCTL[1731]: getparam (8BE1) 917560: Invalid argument
+
+[   53.969915] MuC : MU on wifi0 enabled
+wifi2_0: configuring interface...
+Starting security daemon:
+hostapd  -s -q no_qevt_probe -g /var/run/hostapd/wifi_hgc  /mnt/jffs2/hostapd.conf.wifi0 /mnt/jffs2/hostapd.conf.wifi2 -r 0, > /dev/null &
+/scripts/start-prod: line 422: ict_qtn_server: not found
+main: start qserver daemon with interface wifi0_0 and driver quantenna
+No core dump generated
+[   55.395836] br0: port 4(wifi0_1) entered blocking state
+[   55.396092] br0: port 4(wifi0_1) entered disabled state
+[   55.397303] device wifi0_1 entered promiscuous mode
+[   55.449531] QDRV: Dump register set 2 "Packet memory"
+[   55.520492] QDRV: Dump register set 6 "Global control regs(2): RX frame processor regs"
+QPROCMON: Running for hostapd pid 1798
+hostapd[1798]: 802.11r is enabled
+Jan  1 00:00:56 hostapd[1798]: 802.11r is enabled
+Build name:            c-v50.160.90.47.2
+Build revision:        aac3a8c+
+Build type:            SDK
+Build version:         32a05a2f
+Build timestamp:       1647614178
+Software label:        v50.160.90.47.2
+Platform ID:           562
+Hardware ID:           QSR5G_AX_PLUS
+Hardware revision:     bbic5_rev_c0_1
+Bands:                 5GHz 2.4GHz
+Kernel version:        4.19.35
+Calibration version:   1.20
+DC/IQ cal version:     V1.20
+Power cal version:     V1.20
+MuC firmware:          qtn_driver.qtn_ruby.0.bin
+DSP0 firmware:         rdsp_driver.0.bin
+DSP1 firmware:         rdsp_driver.1.bin
+DSP2 firmware:         rdsp_driver.2.bin
+AuC0 firmware:         auc_driver.0.bin
+AuC1 firmware:         auc_driver.1.bin
+AuC2 firmware:         auc_driver.2.bin
+MAC address 0:         00:0f:15:59:21:50
+MAC address 1:         00:26:86:ba:3b:e6
+MAC address 2:         00:0f:15:59:21:51
+U-Boot version:        v38.8.0.16
+Flash U-Boot version:  v-undef
+Regulatory db version: v38.5.0.90
+[   56.669917] MuC : MU on wifi2 disabled
+Carrier ID 0, uboot update flag 0
+enabling runtime cal for wifi2
+Starting qrpe daemon...
+qtna-rpe(9.0.4-7362684) started
+qdock controlled by Icotera app
+Band Steering is not enabled
+DFS Management Daemon is not enabled
+start-prod: done
+icotera_manager starting...
+icotera_manager started!
+[II] Partial reload flags: [basic 0x00ff | bsses 0x00ff]
+[   59.395412] random: crng init done
+[   59.395447] random: 7 urandom warning(s) missed due to ratelimiting
+NTP client is not enabled
+[   62.495647] br0: port 1(eth1_0) entered disabled state
+Maui service is not enabled
+[   63.017183] find txrx_eq0 8
+[   63.017244] find txrx_eq1 8
+[   63.017281] emac_lib eth1_0: force link (2500/Full)
+[   63.018577] br0: port 1(eth1_0) entered blocking state
+[   63.018621] br0: port 1(eth1_0) entered forwarding state
+DHCP client is not enabled
+Starting httpd
+Restoring /mnt/jffs2/minihttpd.conf from /etc/minihttpd.conf
+Default admin.conf file not found
+bind: Address already in use
+
+Please press Enter to activate this console. data_dir chdir: No such file or directory
+get_if_mac_string_by_index_ex:548 IP interface 1 mac addr have will be set to "00:0f:15:59:21:4e"
+
+[DD] WiFi: WiFi DB initialization begin
+[DD] WiFi: DB entry #1 (self = 1): radio 2.4GHz <= ssid 1@'wifi2_0  ' (Home_Net-59214D ) <= AP 1 (Main_2.4                        )
+[DD] WiFi: DB entry #5 (self = 5): radio   5GHz <= ssid 5@'wifi0_1  ' (Home_Net-59214D ) <= AP 5 (Main_5                          )
+[DD] WiFi: WiFi DB initialization end, 8 Access Points in total, 2 usable
+
+[   65.560783] br0: port 2(wifi0_0) entered disabled state
+[   66.069924] MuC : bw_sel unit 0 bw 80M phymode 11ax80
+[   66.668352] Radar on radio 0 is already configured
+[   67.885936] Enabling SCS version Standard
+[   67.900788] Disabling SCS version Standard
+[   67.982562] MuC : qtn_ioctl_set_param: set rts threshold to 2347
+[   73.901104] br0: port 4(wifi0_1) entered blocking state
+[   73.901145] br0: port 4(wifi0_1) entered forwarding state
+[   74.069926] MuC : bw_sel unit 2 bw 40M phymode 11axng40
+[   74.731806] Enabling SCS version Advanced
+[   74.731855] AACS[wifi2]: AACS is starting in decision mode
+[   74.745988] Disabling SCS version Advanced
+[   74.746042] AACS[wifi2]: AACS is stopping
+[   74.762320] SCS: No available channel to pick
+[   74.869952] MuC : qtn_ioctl_set_param: set rts threshold to 2347
+[   80.970986] br0: port 3(wifi2_0) entered blocking state
+[   80.971034] br0: port 3(wifi2_0) entered forwarding state
+[   82.576001] br0: port 3(wifi2_0) entered disabled state
+[   82.601003] br0: port 4(wifi0_1) entered disabled state
+[   84.237869] timersExe(2495) made unaligned access which was emulated by kernel assist
+[   84.237869] . This can degrade application performance significantly
+[   84.237869] . To enable further logging of such instances, please
+[   84.237869]  echo 0 > /proc/sys/kernel/ignore-unaligned-usertrap
+0000000121 [Warn..] [QRPE] (qrpe_qtna_set_param :0373) Failed to set param(0x1ee:65536257) for qtna interface wifi0_1: err = Operation not supported
